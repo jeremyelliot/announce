@@ -1,12 +1,12 @@
 Announce
 ============
 
-A CodeIgniter library class for managing messages to be displayed to the user.
+A CodeIgniter Spark for managing messages to be displayed to the user.
 
 It maintains one or more arrays of messages in the session, with methods
 to add messages and retrieve arrays of messages.
 
-Announce uses an the `CI_Session` class or your superior replacement that 
+Announce uses the `CI_Session` class or your superior replacement that 
 also provides methods `userdata($id)` and `set_userdata($id, $data)`.
 
 Example code:
@@ -14,6 +14,7 @@ Example code:
 
 ### Load the library
 
+	$this->load->spark('announce/0.0.1');
 	$params = array(&$this->session, array('success', 'error'));
 	$this->load->library('Announce', $params, 'messages');
 	
