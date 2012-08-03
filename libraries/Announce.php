@@ -7,7 +7,7 @@ if (!defined('BASEPATH')) exit('No direct script access allowed');
  * Maintains one or more arrays of messages in the session, with methods
  * to add messages and retrieve arrays of messages.
  * 
- * @author Jeremy Elliot
+ * @author Jeremy Elliot <jeremyelliot@gmail.com>
  * @version 0.0.1
  */
 class Announce {
@@ -45,7 +45,6 @@ class Announce {
   /**
    * Adds a message to the a list.
    * 
-   * The default message type is 'message'.
    * The optional parameter $data may be a primitive value or an array.
    * If the $data parameter is present, $message must be a 
    * {@link http://www.php.net/manual/en/function.sprintf.php printf()}-style

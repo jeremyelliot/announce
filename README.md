@@ -86,7 +86,7 @@ Get all types of message:
 		<ul>
 		<?php foreach ($messages as $message => $msg_type): ?>
 			<li class="<?php echo $msg_type; ?>">
-				<?php echo $messages; ?>
+				<?php echo $message; ?>
 			</li>
 		<?php endforeach; ?>
 		</ul>
