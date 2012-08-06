@@ -14,7 +14,7 @@ Example code:
 
 ### Load the library
 
-	$this->load->spark('announce/0.0.1');
+	$this->load->spark('announce/1.0.0');
 	$params = array(&$this->session, array('success', 'error'));
 	$this->load->library('Announce', $params, 'messages');
 	

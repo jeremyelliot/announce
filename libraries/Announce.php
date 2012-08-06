@@ -8,7 +8,7 @@ if (!defined('BASEPATH')) exit('No direct script access allowed');
  * to add messages and retrieve arrays of messages.
  * 
  * @author Jeremy Elliot <jeremyelliot@gmail.com>
- * @version 0.0.1
+ * @version 1.0.0
  */
 class Announce {
 
@@ -22,6 +22,7 @@ class Announce {
    * - CI_Session &$session_handler reference to the session handler, eg. the standard CI Session class or your superior replacement
    * - array $message_types array of message types, eg. array('success', 'error)
    * - string $session_id 
+	 * 
    * @param array parameter array
    */
   public function __construct($params)
@@ -100,6 +101,7 @@ class Announce {
    * 
    * If $message_type is given, clears only messages of that type
    * If $message_type is not given, clears all messages
+	 * 
    * @param string $message_type type of messages to remove
    * @return Announce $this 
    */
@@ -125,6 +127,7 @@ class Announce {
    * Returns the number of messages stored in the session.
    * If $message_type is given, returns the number of messages
    * of the that type, otherwise returns total number of messages.
+	 * 
    * @param string $message_type
    * @return int number of messages 
    */
@@ -143,12 +146,8 @@ class Announce {
   }
 
   /**
-   * Returns an array of messages to be displayed
-   * 
-   * If $message_type is given, returns an array of messages of that type
-   * If $message_type is not given, returns an array of all messages, 
-   * ordered by type, in the same order as in the constructor param $message_types
-   * Clears the list of messages.
+   * Sames as get(), but clears the list of messages.
+	 * 
    * @param string $message_type type of messages to get
    * @return array messages to be displayed
    */
@@ -160,8 +159,12 @@ class Announce {
   }
 
   /**
-   * Sames as get(), but does not remove messages from the list
+   * Returns an array of messages to be displayed
    * 
+   * If $message_type is given, returns an array of messages of that type
+   * If $message_type is not given, returns an array of all messages, 
+   * ordered by type, in the same order as in the constructor param $message_types
+	 * 
    * @param string $message_type type of messages to peek at
    * @return array messages 
    */
@@ -204,6 +207,7 @@ class Announce {
   /**
    * Add a message using the method name as message_type 
    * Eg. $this->messages->success('the operation was successful');
+	 * 
    * @param string|array $message message or array of messages
    * @return Announce $this
    */
